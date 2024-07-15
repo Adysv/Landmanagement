@@ -11,4 +11,9 @@ class Stuents extends Model
     protected $casts = [
         'schools' => 'array'
     ];
+
+    public function laptops()
+    {
+        return $this->hasOne(Laptops::class);
+    }
 }
