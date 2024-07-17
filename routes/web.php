@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainCotroller;
 use App\Http\Controllers\StudentsController;
@@ -30,6 +31,9 @@ Route::delete('/students/{id}', [StudentsController::class, 'remove']);
 Route::get('/laptop_create', [LaptopsController::class, 'create']);
 Route::post('/laptops', [LaptopsController::class, 'store']);
 Route::get('/details', [LaptopsController::class, 'details']);
+Route::get('/company', [EmployeesController::class, 'welcome']);
+Route::get('/company/create', [EmployeesController::class, 'create']);
+Route::post('/company', [EmployeesController::class, 'store']);
 
 
 Auth::routes();
