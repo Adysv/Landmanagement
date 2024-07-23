@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\EmployeesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainCotroller;
@@ -34,7 +35,7 @@ Route::get('/details', [LaptopsController::class, 'details']);
 Route::get('/company', [EmployeesController::class, 'welcome']);
 Route::get('/company/create', [EmployeesController::class, 'create']);
 Route::post('/company', [EmployeesController::class, 'store']);
-
+Route::get('/index', [CoursesController::class, 'index']);
 
 Auth::routes();
 

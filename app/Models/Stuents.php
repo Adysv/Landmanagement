@@ -16,4 +16,8 @@ class Stuents extends Model
     {
         return $this->hasOne(Laptops::class);
     }
+    public function cources()
+    {
+        return $this->belongsToMany(Courses::class, 'courses_stuents');
+    }
 }
